@@ -39,5 +39,10 @@ describe("Integration of dinosaur and park", function(){
     assert.strictEqual(park.howManyAfter(1), 3);
   })
 
+  it("can calculate how many dinosaurs after 2 years", function(){
+    park.add(dinosaur);
+    assert.strictEqual(park.howManyAfter(2), 9);
+  })
+
 
 })
