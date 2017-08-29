@@ -7,6 +7,6 @@ describe("Jurrasic park enclosure test", function(){
   })
 
   it("should start empty", function(){
-    assert.strictEqual(park.enclosure.size(), 0);
+    assert.strictEqual(park.enclosure.length, 0);
   })
 })
