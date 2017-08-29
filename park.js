@@ -27,5 +27,18 @@ Park.prototype.offspringOver = function(number){
   return dinosaurs;
 }
 
+Park.prototype.howManyAfter = function(years){
+  var totalNumber = 0
+  for(dinosaur of this.enclosure){
+    var numberOfDinos = 1;
+    for(var i = 0; i < years; i++){
+      var temp = (numberOfDinos * dinosaur.noOffspring) + numberOfDinos;
+      numberOfDinos = temp;
+    }
+    totalNumber += numberOfDinos;
+  }
+  return totalNumber;
+}
+
 
 module.exports = Park;
