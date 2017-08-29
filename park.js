@@ -17,5 +17,15 @@ Park.prototype.removeType = function(type){
   this.enclosure = newEnclosure;
 }
 
+Park.prototype.offspringOver = function(number){
+  var dinosaurs = [];
+  for(dinosaur of this.enclosure){
+    if(dinosaur.noOffspring === number){
+      dinosaurs.push(dinosaur);
+    }
+  }
+  return dinosaurs;
+}
+
 
 module.exports = Park;

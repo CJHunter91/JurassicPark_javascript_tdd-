@@ -25,4 +25,14 @@ describe("Integration of dinosaur and park", function(){
     park.removeType("TRex");
     assert.strictEqual(park.enclosure[0], dinosaur2)
   })
+
+  it("can get all the dinos with  offspring over a certain number", function(){
+    park.add(dinosaur);
+    park.add(dinosaur);
+    park.add(dinosaur2);
+    park.add(dinosaur2);
+    assert.strictEqual(park.offspringOver(2).length, 2 )
+  })
+
+
 })
